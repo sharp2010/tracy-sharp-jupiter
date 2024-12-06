@@ -1,25 +1,33 @@
-
-  
-body{
+body {
     background-color: rgb(234, 255, 0);
     color: rgb(88, 14, 156);
     font-family: cursive;
 }
-h1{
+
+h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-h2{
+
+h2 {
     font-size: 200%;
     font-weight: bold;
     color: orange;
 
 }
-#about, #experience, #connect{
+
+#about
+#experience
+#connect {
     padding: 20px;
 }
-#experience{
+
+#experience {
     margin-left: 300px;
 }
-img{
+
+img {
     border-radius: 50px;
+}
+.media{
+   font-family:fantasy;
 }
