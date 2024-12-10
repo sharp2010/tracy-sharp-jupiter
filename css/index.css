@@ -7,6 +7,11 @@ body {
     text-align: center;
 }
 
+.nav-link {
+    display: flex;
+    
+}
+
 img {
     border-radius: 75px;
     border: darkblue 5px solid;
@@ -32,11 +37,13 @@ h2 {
     width: 300px;
     margin-left: 250px;
 }
+
 .connecting {
     padding: 15px;
     margin: 20px;
     list-style-type: none;
 }
+
 li {
-  line-height: 40px;
+    line-height: 20px;
 }
