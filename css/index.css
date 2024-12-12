@@ -1,15 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body {
-    background-color: rgb(234, 255, 0);
-    color: grey;
+    background-color: palegoldenrod;
+    color: darkblue;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+}
+
+.nav-link {
+    margin: 0 10px;
+}
+
 img {
     border-radius: 75px;
-    border: red 5px solid;
+    border: darkblue 5px solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 h1,
@@ -20,8 +32,8 @@ h1,
 h2 {
     font-size: 200%;
     font-weight: bold;
-    color: red;
-    border: blue 3px solid;
+    color: darkblue;
+    border: darkblue 3px solid;
     padding: 10px;
     margin: 10px 20px;
 }
@@ -29,13 +41,57 @@ h2 {
 #experience {
     font-family: 'Lobster', cursive;
     background: white;
-    width: 300px;
-    margin-left: 250px;
+    margin: auto;
+    padding-top: 10px;
 }
+
+/*start of my flexbox container for experience items */
+.exp {
+    display: flex;
+    flex-direction: column; /* will stack items vertically */
+    text-align: center;
+}
+
+/* each experience item container*/
+.exp-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* centers the content vertically */
+    padding: 20px;
+}
+
+/* aligning title to the left */
+.exp-title {
+    flex: 1;  /*will take available space */
+    text-align: left;
+    margin-left: 0px;
+}
+
+/* styling exp dates on the right */
+.exp-date {
+    text-align: right;
+    margin-right: 0;
+    flex-shrink: 0; /* will prevent the date from shrinking */
+}
+
+/* stacking exp description - below title */
+.exp-description {
+    margin-left: 0px;
+    margin-top: 10px;
+    text-align: center;
+}
+
 .connecting {
+    display: flex; /* sets the layout*/
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* space between each link*/
     padding: 15px;
-    margin: 20px;
+    list-style-type: none; /* removes bullet points*/
+    text-align: center;
 }
-li {
-  line-height: 40px;
+
+.connecting a {
+    text-decoration: none; /* Remove underline */
+    color: darkblue /* Set a color for icons/links */
 }
