@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
+/* inital coding is for mobile-first design */
 body {
     background-color: palegoldenrod;
     color: darkblue;
@@ -109,7 +109,7 @@ h2 {
        
 }
 
-/* to make changes for medium devices */
+/* to make changes for tablet devices */
 @media only screen and (min-width: 768px) {
 
     /* 1st element */
@@ -146,7 +146,7 @@ h2 {
     /* 2nd element */
     .exp-item {
         padding: 40px;
-        background-color: green
+        background-color: green;
     }
 
     /* 3rd element */
