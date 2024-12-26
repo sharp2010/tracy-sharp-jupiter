@@ -95,3 +95,40 @@ h2 {
     text-decoration: none; /* Remove underline */
     color: darkblue /* Set a color for icons/links */
 }
+/* to make changes for medium devices */
+@media only screen and (min-width: 768px) {
+      /* 1st element */
+    h1 {
+    font-size: 80px;
+   color: red; 
+}
+  /* 2nd element */
+  .exp-item {
+    padding: 30px; 
+    background-color: lightblue; 
+}
+  /* 3rd element */
+  .connecting {
+    gap: 25px; /* increase gap between links */
+    padding: 20px; /* increase padding */
+}
+}
+/* to make changes for desktop devices */
+@media only screen and (min-width: 1200px) {
+    /* 1st element */
+    h1 {
+        font-size: 100px;
+       color: darkgreen; 
+    }
+      /* 2nd element */
+      .exp-item {
+        padding: 40px; 
+        background-color: green 
+    }
+      /* 3rd element */
+      .exp-description {
+        font-size: 1.2rem;
+        font-style: italic; 
+    }
+    
+}
