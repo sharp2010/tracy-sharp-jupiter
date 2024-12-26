@@ -48,7 +48,8 @@ h2 {
 /*start of my flexbox container for experience items */
 .exp {
     display: flex;
-    flex-direction: column; /* will stack items vertically */
+    flex-direction: column;
+    /* will stack items vertically */
     text-align: center;
 }
 
@@ -56,13 +57,16 @@ h2 {
 .exp-item {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* centers the content vertically */
+    /* centers the content vertically */
+    align-items: center;
+    
     padding: 20px;
 }
 
 /* aligning title to the left */
 .exp-title {
-    flex: 1;  /*will take available space */
+    /*will take available space */
+    flex: 1;
     text-align: left;
     margin-left: 0px;
 }
@@ -70,8 +74,10 @@ h2 {
 /* styling exp dates on the right */
 .exp-date {
     text-align: right;
-    margin-right: 0;
-    flex-shrink: 0; /* will prevent the date from shrinking */
+    margin-right: 0; 
+    /* will prevent the date from shrinking */
+    flex-shrink: 0;
+   
 }
 
 /* stacking exp description - below title */
@@ -82,53 +88,71 @@ h2 {
 }
 
 .connecting {
-    display: flex; /* sets the layout*/
+    /* sets the layout*/
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* space between each link*/
-    padding: 15px;
-    list-style-type: none; /* removes bullet points*/
+    gap: 20px;
+    /* space between each link*/
+    padding: 15px; 
+    /* removes bullet points*/
+    list-style-type: none;
+  
     text-align: center;
 }
 
-.connecting a {
-    text-decoration: none; /* Remove underline */
-    color: darkblue /* Set a color for icons/links */
+.connecting a { 
+    /* Remove underline */ 
+    text-decoration: none;
+   /* Set a color for icons/links */
+    color: darkblue
+       
 }
+
 /* to make changes for medium devices */
 @media only screen and (min-width: 768px) {
-      /* 1st element */
+
+    /* 1st element */
     h1 {
-    font-size: 80px;
-   color: red; 
+        font-size: 80px;
+        color: red;
+    }
+
+    /* 2nd element */
+    .exp-item {
+        padding: 30px;
+        background-color: lightblue;
+    }
+
+    /* 3rd element */
+    .connecting {
+        gap: 25px;
+        padding: 20px;
+        /* stretch goal changing flexbox to grid layout */
+        display: grid;
+        justify-content: center;
+    }
 }
-  /* 2nd element */
-  .exp-item {
-    padding: 30px; 
-    background-color: lightblue; 
-}
-  /* 3rd element */
-  .connecting {
-    gap: 25px; /* increase gap between links */
-    padding: 20px; /* increase padding */
-}
-}
+
 /* to make changes for desktop devices */
 @media only screen and (min-width: 1200px) {
+
     /* 1st element */
     h1 {
         font-size: 100px;
-       color: darkgreen; 
+        color: darkgreen;
     }
-      /* 2nd element */
-      .exp-item {
-        padding: 40px; 
-        background-color: green 
+
+    /* 2nd element */
+    .exp-item {
+        padding: 40px;
+        background-color: green
     }
-      /* 3rd element */
-      .exp-description {
+
+    /* 3rd element */
+    .exp-description {
         font-size: 1.2rem;
-        font-style: italic; 
+        font-style: italic;
     }
-    
+
 }
