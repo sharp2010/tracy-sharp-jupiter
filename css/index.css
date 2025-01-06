@@ -59,7 +59,6 @@ h2 {
     justify-content: space-between;
     /* centers the content vertically */
     align-items: center;
-    
     padding: 20px;
 }
 
@@ -114,13 +113,16 @@ h2 {
 
     /* 1st element */
     h1 {
+        /* increases size of h1 at tablet size*/
         font-size: 80px;
+        /* changes color of h1 at tablet size*/
         color: red;
     }
 
     /* 2nd element */
     .exp-item {
         padding: 30px;
+        /* add color at tablet size*/
         background-color: lightblue;
     }
 
@@ -139,13 +141,17 @@ h2 {
 
     /* 1st element */
     h1 {
+        /* increases font size of h1 at desktop size*/
         font-size: 100px;
+        /* changes color of h1 at desktop size*/
         color: darkgreen;
     }
 
     /* 2nd element */
     .exp-item {
-        padding: 40px;
+        /* styles experience section at desktop size*/
+        margin: 0 4em 0 4em;
+        padding: 0 100px;
         background-color: green;
     }
 
