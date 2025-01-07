@@ -50,33 +50,16 @@ h2 {
     display: flex;
     flex-direction: column;
     /* will stack items vertically */
-    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* each experience item container*/
 .exp-item {
     display: flex;
-    justify-content: space-between;
-    /* centers the content vertically */
-    align-items: center;
-    padding: 20px;
-}
-
-/* aligning title to the left */
-.exp-title {
-    /*will take available space */
-    flex: 1;
-    text-align: left;
-    margin-left: 0px;
-}
-
-/* styling exp dates on the right */
-.exp-date {
-    text-align: right;
-    margin-right: 0; 
-    /* will prevent the date from shrinking */
-    flex-shrink: 0;
-   
+    flex-direction: row;
+    gap: 10em;
+    justify-content: center;
 }
 
 /* stacking exp description - below title */
@@ -96,7 +79,6 @@ h2 {
     padding: 15px; 
     /* removes bullet points*/
     list-style-type: none;
-  
     text-align: center;
 }
 
@@ -110,18 +92,17 @@ h2 {
 
 /* to make changes for tablet devices */
 @media only screen and (min-width: 768px) {
-
     /* 1st element */
     h1 {
         /* increases size of h1 at tablet size*/
-        font-size: 80px;
+        font-size: x-large;
         /* changes color of h1 at tablet size*/
         color: red;
     }
 
     /* 2nd element */
     .exp-item {
-        padding: 30px;
+       font-size: x-large;
         /* add color at tablet size*/
         background-color: lightblue;
     }
@@ -142,7 +123,7 @@ h2 {
     /* 1st element */
     h1 {
         /* increases font size of h1 at desktop size*/
-        font-size: 100px;
+        font-size: xx-large;
         /* changes color of h1 at desktop size*/
         color: darkgreen;
     }
@@ -150,14 +131,13 @@ h2 {
     /* 2nd element */
     .exp-item {
         /* styles experience section at desktop size*/
-        margin: 0 4em 0 4em;
-        padding: 0 100px;
+        font-size: x-large;
         background-color: green;
     }
 
     /* 3rd element */
     .exp-description {
-        font-size: 1.2rem;
+        font-size: x-large;
         font-style: italic;
     }
 
