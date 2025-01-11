@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
+/* inital coding is for mobile-first design */
 body {
     background-color: palegoldenrod;
     color: darkblue;
@@ -48,30 +48,18 @@ h2 {
 /*start of my flexbox container for experience items */
 .exp {
     display: flex;
-    flex-direction: column; /* will stack items vertically */
-    text-align: center;
+    flex-direction: column;
+    /* will stack items vertically */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* each experience item container*/
 .exp-item {
     display: flex;
-    justify-content: space-between;
-    align-items: center; /* centers the content vertically */
-    padding: 20px;
-}
-
-/* aligning title to the left */
-.exp-title {
-    flex: 1;  /*will take available space */
-    text-align: left;
-    margin-left: 0px;
-}
-
-/* styling exp dates on the right */
-.exp-date {
-    text-align: right;
-    margin-right: 0;
-    flex-shrink: 0; /* will prevent the date from shrinking */
+    flex-direction: row;
+    gap: 10em;
+    justify-content: center;
 }
 
 /* stacking exp description - below title */
@@ -82,16 +70,75 @@ h2 {
 }
 
 .connecting {
-    display: flex; /* sets the layout*/
+    /* sets the layout*/
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* space between each link*/
-    padding: 15px;
-    list-style-type: none; /* removes bullet points*/
+    gap: 20px;
+    /* space between each link*/
+    padding: 15px; 
+    /* removes bullet points*/
+    list-style-type: none;
     text-align: center;
 }
 
-.connecting a {
-    text-decoration: none; /* Remove underline */
-    color: darkblue /* Set a color for icons/links */
+.connecting a { 
+    /* Remove underline */ 
+    text-decoration: none;
+   /* Set a color for icons/links */
+    color: darkblue
+       
+}
+
+/* to make changes for tablet devices */
+@media only screen and (min-width: 768px) {
+    /* 1st element */
+    h1 {
+        /* increases size of h1 at tablet size*/
+        font-size: x-large;
+        /* changes color of h1 at tablet size*/
+        color: red;
+    }
+
+    /* 2nd element */
+    .exp-item {
+       font-size: x-large;
+        /* add color at tablet size*/
+        background-color: lightblue;
+    }
+
+    /* 3rd element */
+    .connecting {
+        gap: 25px;
+        padding: 20px;
+        /* stretch goal changing flexbox to grid layout */
+        display: grid;
+        justify-content: center;
+    }
+}
+
+/* to make changes for desktop devices */
+@media only screen and (min-width: 1200px) {
+
+    /* 1st element */
+    h1 {
+        /* increases font size of h1 at desktop size*/
+        font-size: xx-large;
+        /* changes color of h1 at desktop size*/
+        color: darkgreen;
+    }
+
+    /* 2nd element */
+    .exp-item {
+        /* styles experience section at desktop size*/
+        font-size: x-large;
+        background-color: green;
+    }
+
+    /* 3rd element */
+    .exp-description {
+        font-size: x-large;
+        font-style: italic;
+    }
+
 }
