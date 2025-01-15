@@ -183,8 +183,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1 fr));
     gap: 25px;
-    justify-content: cen
-    ter;
+    justify-content: center;
     }
 
 #skills  {
