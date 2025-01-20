@@ -24,8 +24,7 @@ img {
     margin-bottom: 20px;
 }
 
-h1,
-.connecting {
+h1 .connecting {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -41,8 +40,11 @@ h2 {
 #experience {
     font-family: 'Lobster', cursive;
     background: white;
-    margin: auto;
-    padding-top: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;  
+    max-width: 1200px;
 }
 
 /*start of my flexbox container for experience items */
@@ -52,28 +54,32 @@ h2 {
     /* will stack items vertically */
     justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 /* each experience item container*/
 .exp-item {
     display: flex;
-    flex-direction: row;
-    gap: 10em;
-    justify-content: center;
+    /*flex-direction: row;*/
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px;
+    padding: 15px;  
+    border-radius: 5px;  
 }
 
 /* stacking exp description - below title */
 .exp-description {
-    margin-left: 0px;
     margin-top: 10px;
     text-align: center;
 }
-
+#management {
+    margin-bottom: 0;
+}
 .connecting {
     /* sets the layout*/
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 20px;
     /* space between each link*/
     padding: 15px; 
@@ -89,10 +95,35 @@ h2 {
     color: darkblue
        
 }
+/*--- skills section ----*/
+#skills {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* skills header */
+#skills h2 {
+    font-size: 2rem;
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* Skills List Container */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
 
 /* to make changes for tablet devices */
 @media only screen and (min-width: 768px) {
-    /* 1st element */
+
     h1 {
         /* increases size of h1 at tablet size*/
         font-size: x-large;
@@ -100,14 +131,17 @@ h2 {
         color: red;
     }
 
-    /* 2nd element */
     .exp-item {
        font-size: x-large;
         /* add color at tablet size*/
         background-color: lightblue;
+        /* change the direction of items when larger */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20em;
     }
 
-    /* 3rd element */
     .connecting {
         gap: 25px;
         padding: 20px;
@@ -115,30 +149,45 @@ h2 {
         display: grid;
         justify-content: center;
     }
+    
+    #skills li {
+        /* adds more width on larger screens */
+        flex: 1 1 180px;
+    }
 }
 
 /* to make changes for desktop devices */
 @media only screen and (min-width: 1200px) {
 
-    /* 1st element */
     h1 {
         /* increases font size of h1 at desktop size*/
         font-size: xx-large;
         /* changes color of h1 at desktop size*/
-        color: darkgreen;
+        color: purple;
     }
 
-    /* 2nd element */
     .exp-item {
         /* styles experience section at desktop size*/
         font-size: x-large;
-        background-color: green;
+        background-color: lightgrey;
+        margin: 0 20px;
     }
 
-    /* 3rd element */
     .exp-description {
         font-size: x-large;
         font-style: italic;
     }
 
+/* skills layout: using grid on large screens */
+#skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    }
+
+#skills  {
+    font-size: 1.5rem;
+    padding: 15px 25px;
+    }
 }
