@@ -19,7 +19,7 @@
             <a class="nav-link" href="#skills">Skills</a>
             <a class="nav-link" href="#projects">Projects</a>
             <a class="nav-link" href="#connect">Connect</a>
-            <a class="nav-link" href="#message">Messge</a>
+            <a class="nav-link" href="#message">Leave a Messge</a>
         </nav><!-- end of nav bar -->
     </header>
 
@@ -48,7 +48,8 @@
                 <h3 class="exp-title">Management</h3>
                 <h4 class="exp-date">1997 - Present</h4>
             </div><!-- end of exp div-->
-            <p id="management" class="exp-description">Experience in project management and client communication for successful
+            <p id="management" class="exp-description">Experience in project management and client communication for
+                successful
                 business outcomes.
             <p>
 
@@ -84,24 +85,31 @@
             <li><a href="https://linkedin.com/in/tracy-sharp"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
             <li><a href="https://www.facebook.com/sharpconcepts19/"><i class="fab fa-facebook"></i> Facebook</a></li>
             <li><a href="https://www.instagram.com/eatmac/"><i class="fab fa-instagram"></i> Instagram</a></li>
-
         </ul>
     </section>
-    <section>
-        <h2 id="message">Leave Message</h2>
-        <form action="leaveMessage">
-            <label for="name">Name:</label>
+    <section id="message">
+        <!-- Start of leave a message form-->
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+            <label for="usersName">Name:</label>
             <input type="text" name="usersName" required="true">
             <br>
-            <label for="email">Email:</label>
+            <label for="usersEmail">Email:</label>
             <input type="email" name="usersEmail" required="true">
             <br>
             <label for="usersMessage">Message:</label>
-            <textarea name="usersMessage" id="usersMessage" required="true"></textarea>
+            <textarea name="usersMessage" id="usersMessage" required spellcheck="true"></textarea>
             <br>
             <button type="submit">Submit</button>
         </form>
+        <!-- End of leave a message section -->
     </section>
+    <!-- Start of messages section-->
+    <section id="messages">
+        <h2>Messages</h2>
+        <ul></ul>
+    </section>
+    <!-- End of messages section-->
     <script src="js/index.js"></script>
 </body>
 
