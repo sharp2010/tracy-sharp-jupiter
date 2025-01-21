@@ -9,7 +9,7 @@ let thisYear = today.getFullYear();
 let copyright = document.createElement('p');
 
 //adds the current year inside the <footer> element
-copyright.textContent = `\u00A9 ${thisYear} Tracy Sharp's Website.  All rights reserved.</p>`;
+copyright.textContent = `\u00A9 ${thisYear} Tracy Sharp's Website.  All rights reserved.`;
 
 // appends the <p> element to the <footer>
 footer.appendChild(copyright);
