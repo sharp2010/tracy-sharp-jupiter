@@ -37,3 +37,55 @@ skills.forEach(skill => {
     // putting the <li> to the <ul>
     skillsList.appendChild(listItem);
 });
+
+// create a variable named messageForm
+let messageForm = document.getElementsByName('leave_message')[0];
+    // adding an event listener for submit
+    messageForm.addEventListener('submit', (event) => {
+        event.preventDefault(); //prevents form from submitting
+
+        // three new variables that retrieve the value from the event using event.target
+        let name = event.target.usersName.value;
+        let email = event.target.usersEmail.value;
+        let message = event.target.usersMessage.value;
+        
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Message:', message);
+
+        //creating a variable  messagesSection
+        let messageSection = document.getElementById('messages');
+        let messageList = messageSection.querySelector('ul')
+
+        // creating a new <li> element for the message  
+        let newMessage = document.createElement('li');
+
+        // setting the inner html for the newMessage element
+        newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>
+        <span>: ${message}</span>`;
+
+        // append the new message to the message list
+       // messageList.appendChild(newMessage);
+
+        // creating a veriable to make a new <button>
+        let removeButton = document.createElement('button');
+
+        // setting inner text to remove text
+        removeButton.innerText = 'remove';
+        removeButton.type = 'button';
+
+        removeButton.addEventListener('click', () => {
+            let entry = removeButton.parentNode;
+
+            //removes the message from the DOM
+            entry.removeChild();
+        });
+
+        newMessage.appendChild(removeButton); // Add the "remove" button to the message
+
+        // append the newMessage to messageList element
+        messageList.appendChild(newMessage);
+
+        // reset the form after submitting
+        messageForm.reset();
+    });
