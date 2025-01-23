@@ -121,6 +121,36 @@ h2 {
     padding: 0;
 }
 
+/*  message form styling */
+#message {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Style input fields and textarea to be centered */
+form[name="leave_message"] input,
+form[name="leave_message"] textarea {
+    width: 200px; 
+    padding: 5px; 
+    margin: 10px;
+    border-radius: 4px; 
+    font-size: 1rem; 
+}
+
+/* Style the submit button */
+form[name="leave_message"] button {
+    align-self: center; /* Center the button horizontally */
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
 /* to make changes for tablet devices */
 @media only screen and (min-width: 768px) {
 
