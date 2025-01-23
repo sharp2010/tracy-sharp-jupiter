@@ -64,9 +64,6 @@ let messageForm = document.getElementsByName('leave_message')[0];
         newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>
         <span>: ${message}</span>`;
 
-        // append the new message to the message list
-       // messageList.appendChild(newMessage);
-
         // creating a veriable to make a new <button>
         let removeButton = document.createElement('button');
 
@@ -79,9 +76,9 @@ let messageForm = document.getElementsByName('leave_message')[0];
 
             //removes the message from the DOM
             entry.removeChild();
-        });
-
-        newMessage.appendChild(removeButton); // Add the "remove" button to the message
+         });
+        // Add the "remove" button to the message
+        newMessage.appendChild(removeButton); 
 
         // append the newMessage to messageList element
         messageList.appendChild(newMessage);
