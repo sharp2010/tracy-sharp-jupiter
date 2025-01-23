@@ -36,7 +36,7 @@ skills.forEach(skill => {
 
     // putting the <li> to the <ul>
     skillsList.appendChild(listItem);
-
+});
 // create a variable named messageForm
 let messageForm = document.getElementsByName('leave_message')[0];
     // adding an event listener for submit
