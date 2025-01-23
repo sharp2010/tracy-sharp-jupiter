@@ -75,7 +75,7 @@ let messageForm = document.getElementsByName('leave_message')[0];
             let entry = removeButton.parentNode;
 
             //removes the message from the DOM
-            entry.removeChild();
+            entry.remove();
          });
         // Add the "remove" button to the message
         newMessage.appendChild(removeButton); 
