@@ -9,7 +9,7 @@ let thisYear = today.getFullYear();
 let copyright = document.createElement('p');
 
 //adds the current year inside the <footer> element
-copyright.textContent = `\u00A9 ${thisYear} Tracy Sharp's Website.  All rights reserved.</p>`;
+copyright.textContent = `\u00A9 ${thisYear} Tracy Sharp's Website.  All rights reserved.`;
 
 // appends the <p> element to the <footer>
 footer.appendChild(copyright);
@@ -37,3 +37,51 @@ skills.forEach(skill => {
     // putting the <li> to the <ul>
     skillsList.appendChild(listItem);
 });
+// create a variable named messageForm
+let messageForm = document.getElementsByName('leave_message')[0];
+    // adding an event listener for submit
+    messageForm.addEventListener('submit', (event) => {
+        event.preventDefault(); //prevents form from submitting
+
+        // three new variables that retrieve the value from the event using event.target
+        let name = event.target.usersName.value;
+        let email = event.target.usersEmail.value;
+        let message = event.target.usersMessage.value;
+        
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Message:', message);
+
+        //creating a variable  messagesSection
+        let messageSection = document.getElementById('messages');
+        let messageList = messageSection.querySelector('ul')
+
+        // creating a new <li> element for the message  
+        let newMessage = document.createElement('li');
+
+        // setting the inner html for the newMessage element
+        newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>
+        <span>: ${message}</span>`;
+
+        // creating a veriable to make a new <button>
+        let removeButton = document.createElement('button');
+
+        // setting inner text to remove text
+        removeButton.innerText = 'remove';
+        removeButton.type = 'button';
+
+        removeButton.addEventListener('click', () => {
+            let entry = removeButton.parentNode;
+
+            //removes the message from the DOM
+            entry.remove();
+         });
+        // Add the "remove" button to the message
+        newMessage.appendChild(removeButton); 
+
+        // append the newMessage to messageList element
+        messageList.appendChild(newMessage);
+
+        // reset the form after submitting
+        messageForm.reset();
+    });

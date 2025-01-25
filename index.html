@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+f
 <head>
 
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Tracy Sharp's Portfolio</title>
+
 </head>
 
 <body>
@@ -19,11 +20,13 @@
             <a class="nav-link" href="#skills">Skills</a>
             <a class="nav-link" href="#projects">Projects</a>
             <a class="nav-link" href="#connect">Connect</a>
+            <a class="nav-link" href="#message">Leave a Message</a>
         </nav><!-- end of nav bar -->
     </header>
 
     <img src="./images/IMG_3227.JPG" alt="Happy toddler with arms up" width="150"
         height="150"><!--image added and sized-->
+
     <section id="about"><!-- start of about section-->
         <h2>About</h2>
         <p>I am an ambitious entrepreneur venturing into the world of business by starting a company that focuses on
@@ -47,7 +50,8 @@
                 <h3 class="exp-title">Management</h3>
                 <h4 class="exp-date">1997 - Present</h4>
             </div><!-- end of exp div-->
-            <p id="management" class="exp-description">Experience in project management and client communication for successful
+            <p id="management" class="exp-description">Experience in project management and client communication for
+                successful
                 business outcomes.
             <p>
 
@@ -63,18 +67,17 @@
             </div><!-- end of exp-item div-->
             <p class="exp-description">Familiar with version control using Git and GitHub for collaborative
                 projects.</p>
-
         </div><!-- end of exp div-->
     </section>
+
     <section id="skills"><!-- start of skills section-->
         <h2>Skills</h2>
         <ul></ul>
-
     </section><!-- end of skills section-->
+
     <section id="projects"><!-- start of projects section-->
         <h2>Projects</h2>
         <ul></ul>
-
     </section><!-- end of projects section-->
 
     <section id="connect">
@@ -83,10 +86,36 @@
             <li><a href="https://linkedin.com/in/tracy-sharp"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
             <li><a href="https://www.facebook.com/sharpconcepts19/"><i class="fab fa-facebook"></i> Facebook</a></li>
             <li><a href="https://www.instagram.com/eatmac/"><i class="fab fa-instagram"></i> Instagram</a></li>
-
         </ul>
     </section>
+
+    <!-- Start of leave a message form-->
+    <section id="message">
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+            <label for="usersName">Name:</label>
+            <input type="text" name="usersName" required="true">
+            <br>
+            <label for="usersEmail">Email:</label>
+            <input type="email" name="usersEmail" required="true">
+            <br>
+            <label for="usersMessage">Message:</label>
+            <textarea name="usersMessage" id="usersMessage" required spellcheck="true"></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <!-- End of leave a message section -->
+    </section>
+
+    <!-- Start of messages section-->
+    <section id="messages">
+        <h2>Messages</h2>
+        <ul></ul>
+    </section>
+    <!-- End of messages section-->
+
     <script src="js/index.js"></script>
+
 </body>
 
 </html>
