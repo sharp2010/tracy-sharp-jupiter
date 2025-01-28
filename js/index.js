@@ -85,3 +85,20 @@ let messageForm = document.getElementsByName('leave_message')[0];
         // reset the form after submitting
         messageForm.reset();
     });
+
+    const githubUsername = 'sharp2010';
+    const url = `https://api.github.com/users/{sharp2010/tracy-sharp-jupiter}/repos`;
+        async funcgtion getRepos(){
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response not working');
+                }
+                const repos = await response.json();
+                console.log('Repositories:', repos);
+            } catch (error) {
+                console.error('A problem exists with the fetch operation:', error);
+            }
+        }
+
+    getRepos();
