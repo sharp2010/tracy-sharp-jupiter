@@ -87,7 +87,7 @@ let messageForm = document.getElementsByName('leave_message')[0];
     });
     /* my GitHub username */ 
     const githubUsername = 'sharp2010';
-    const url = `https://api.github.com/users/${sharp2010/tracy-sharp-jupiter}/repos`;
+    const url = `https://api.github.com/users/${githubUsername}/repos`;
 
         /* asynchronously fetch repos */ 
         async function getRepos() {
