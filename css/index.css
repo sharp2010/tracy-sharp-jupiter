@@ -151,6 +151,23 @@ form[name="leave_message"] button {
     font-size: 1rem;
     cursor: pointer;
 }
+
+/* Projects Section */
+#projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.project-list {
+    /* removes bullet points*/
+    list-style-type: none;
+    text-align: center;
+    gap: 20px;
+}
 /* to make changes for tablet devices */
 @media only screen and (min-width: 768px) {
 
