@@ -42,7 +42,6 @@ h2 {
     background: white;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
     border-radius: 10px;  
     max-width: 1200px;
 }
@@ -55,6 +54,7 @@ h2 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    
 }
 
 /* each experience item container*/
@@ -162,11 +162,12 @@ form[name="leave_message"] button {
     text-align: center;
 }
 
-.project-list {
+.project-list li {
     /* removes bullet points*/
     list-style-type: none;
     text-align: center;
-    gap: 20px;
+    font-size: bold;
+    padding: 10px;
 }
 /* to make changes for tablet devices */
 @media only screen and (min-width: 768px) {
@@ -178,7 +179,7 @@ form[name="leave_message"] button {
         color: red;
     }
 
-    .exp-item {
+    .exp-item  {
        font-size: x-large;
         /* add color at tablet size*/
         background-color: lightblue;
@@ -216,7 +217,6 @@ form[name="leave_message"] button {
     .exp-item {
         /* styles experience section at desktop size*/
         font-size: x-large;
-        background-color: lightgrey;
         margin: 0 20px;
     }
 
