@@ -85,3 +85,48 @@ let messageForm = document.getElementsByName('leave_message')[0];
         // reset the form after submitting
         messageForm.reset();
     });
+    /* my GitHub username */ 
+    const githubUsername = 'sharp2010';
+    const url = `https://api.github.com/users/${githubUsername}/repos`;
+
+        /* asynchronously fetch repos */ 
+        async function getRepos() {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response not working');
+                }
+                /* parse JSON */
+                const repos = await response.json();
+                /* logs the repositories to console */
+                console.log('Repositories:', repos);
+
+                /* DOM manipulation */
+
+                /* creating a variable to store the list of repositories */
+                const repositories = repos;
+
+                /* projects section by ID */
+                const projectSection = document.getElementById('projects');
+
+                /* selecting project list element in the project section */
+                const projectList = projectSection.querySelector('.project-list');
+
+                /* loops the repositories-creates list items */
+                repositories.forEach(repo => {
+                    /* creates a new <li> element */
+                    const project = document.createElement('li');
+
+                    /* setting the name of the repository as text */
+                    project.innerText = repo.name;
+
+                    /* appen the <li> to the project list */
+                    projectList.appendChild(project);
+                });
+
+            } catch (error) {
+                console.error('A problem exists with the fetch operation:', error);
+            }
+        }
+        /*calls the function to get repos */
+    getRepos();
