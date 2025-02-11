@@ -98,13 +98,14 @@ h2 {
     color: darkblue
 }
 
-/*--- skills section ----*/
+/* skills section */
 #skills {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     margin: 20px auto;
     max-width: 1200px;
+    text-align: center;
 }
 
 /* skills header */
@@ -112,6 +113,7 @@ h2 {
     font-size: 2rem;
     color: darkblue;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 /* Skills List Container */
@@ -122,6 +124,13 @@ h2 {
     gap: 20px;
     list-style: none;
     padding: 0;
+}
+
+#skills li {
+    font-size: 1.2rem;
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
 /*  message form styling */
