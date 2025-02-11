@@ -39,94 +39,94 @@ skills.forEach(skill => {
 });
 // create a variable named messageForm
 let messageForm = document.getElementsByName('leave_message')[0];
-    // adding an event listener for submit
-    messageForm.addEventListener('submit', (event) => {
-        event.preventDefault(); //prevents form from submitting
+// adding an event listener for submit
+messageForm.addEventListener('submit', (event) => {
+    event.preventDefault(); //prevents form from submitting
 
-        // three new variables that retrieve the value from the event using event.target
-        let name = event.target.usersName.value;
-        let email = event.target.usersEmail.value;
-        let message = event.target.usersMessage.value;
-        
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Message:', message);
+    // three new variables that retrieve the value from the event using event.target
+    let name = event.target.usersName.value;
+    let email = event.target.usersEmail.value;
+    let message = event.target.usersMessage.value;
 
-        //creating a variable  messagesSection
-        let messageSection = document.getElementById('messages');
-        let messageList = messageSection.querySelector('ul')
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Message:', message);
 
-        // creating a new <li> element for the message  
-        let newMessage = document.createElement('li');
+    //creating a variable  messagesSection
+    let messageSection = document.getElementById('messages');
+    let messageList = messageSection.querySelector('ul')
 
-        // setting the inner html for the newMessage element
-        newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>
+    // creating a new <li> element for the message  
+    let newMessage = document.createElement('li');
+
+    // setting the inner html for the newMessage element
+    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>
         <span>: ${message}</span>`;
 
-        // creating a veriable to make a new <button>
-        let removeButton = document.createElement('button');
+    // creating a veriable to make a new <button>
+    let removeButton = document.createElement('button');
 
-        // setting inner text to remove text
-        removeButton.innerText = 'remove';
-        removeButton.type = 'button';
+    // setting inner text to remove text
+    removeButton.innerText = 'remove';
+    removeButton.type = 'button';
 
-        removeButton.addEventListener('click', () => {
-            let entry = removeButton.parentNode;
+    removeButton.addEventListener('click', () => {
+        let entry = removeButton.parentNode;
 
-            //removes the message from the DOM
-            entry.remove();
-         });
-        // Add the "remove" button to the message
-        newMessage.appendChild(removeButton); 
-
-        // append the newMessage to messageList element
-        messageList.appendChild(newMessage);
-
-        // reset the form after submitting
-        messageForm.reset();
+        //removes the message from the DOM
+        entry.remove();
     });
-    /* my GitHub username */ 
-    const githubUsername = 'sharp2010';
-    const url = `https://api.github.com/users/${githubUsername}/repos`;
+    // Add the "remove" button to the message
+    newMessage.appendChild(removeButton);
 
-        /* asynchronously fetch repos */ 
-        async function getRepos() {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error('Network response not working');
-                }
-                /* parse JSON */
-                const repos = await response.json();
-                /* logs the repositories to console */
-                console.log('Repositories:', repos);
+    // append the newMessage to messageList element
+    messageList.appendChild(newMessage);
 
-                /* DOM manipulation */
+    // reset the form after submitting
+    messageForm.reset();
+});
+/* my GitHub username */
+const githubUsername = 'sharp2010';
+const url = `https://api.github.com/users/${githubUsername}/repos`;
 
-                /* creating a variable to store the list of repositories */
-                const repositories = repos;
-
-                /* projects section by ID */
-                const projectSection = document.getElementById('projects');
-
-                /* selecting project list element in the project section */
-                const projectList = projectSection.querySelector('.project-list');
-
-                /* loops the repositories-creates list items */
-                repositories.forEach(repo => {
-                    /* creates a new <li> element */
-                    const project = document.createElement('li');
-
-                    /* setting the name of the repository as text */
-                    project.innerText = repo.name;
-
-                    /* appen the <li> to the project list */
-                    projectList.appendChild(project);
-                });
-
-            } catch (error) {
-                console.error('A problem exists with the fetch operation:', error);
-            }
+/* asynchronously fetch repos */
+async function getRepos() {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response not working');
         }
-        /*calls the function to get repos */
-    getRepos();
+        /* parse JSON */
+        const repos = await response.json();
+        /* logs the repositories to console */
+        console.log('Repositories:', repos);
+
+        /* DOM manipulation */
+
+        /* creating a variable to store the list of repositories */
+        const repositories = repos;
+
+        /* projects section by ID */
+        const projectSection = document.getElementById('projects');
+
+        /* selecting project list element in the project section */
+        const projectList = projectSection.querySelector('.project-list');
+
+        /* loops the repositories-creates list items */
+        repositories.forEach(repo => {
+            /* creates a new <li> element */
+            const project = document.createElement('li');
+
+            /* setting the name of the repository as text */
+            project.innerText = repo.name;
+
+            /* appen the <li> to the project list */
+            projectList.appendChild(project);
+        });
+
+    } catch (error) {
+        console.error('A problem exists with the fetch operation:', error);
+    }
+}
+/*calls the function to get repos */
+getRepos();

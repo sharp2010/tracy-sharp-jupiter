@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 /* inital coding is for mobile-first design */
 body {
     background-color: palegoldenrod;
@@ -42,7 +43,7 @@ h2 {
     background: white;
     margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;  
+    border-radius: 10px;
     max-width: 1200px;
 }
 
@@ -54,7 +55,7 @@ h2 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    
+
 }
 
 /* each experience item container*/
@@ -62,10 +63,10 @@ h2 {
     display: flex;
     /*flex-direction: row;*/
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     gap: 10px;
-    padding: 15px;  
-    border-radius: 5px;  
+    padding: 15px;
+    border-radius: 5px;
 }
 
 /* stacking exp description - below title */
@@ -73,28 +74,30 @@ h2 {
     margin-top: 10px;
     text-align: center;
 }
+
 #management {
     margin-bottom: 0;
 }
+
 .connecting {
     /* sets the layout*/
     display: flex;
     justify-content: center;
     gap: 20px;
     /* space between each link*/
-    padding: 15px; 
+    padding: 15px;
     /* removes bullet points*/
     list-style-type: none;
     text-align: center;
 }
 
-.connecting a { 
-    /* Remove underline */ 
+.connecting a {
+    /* Remove underline */
     text-decoration: none;
-   /* Set a color for icons/links */
+    /* Set a color for icons/links */
     color: darkblue
-       
 }
+
 /*--- skills section ----*/
 #skills {
     padding: 20px;
@@ -133,18 +136,20 @@ h2 {
 /* Style input fields and textarea to be centered */
 form[name="leave_message"] input,
 form[name="leave_message"] textarea {
-    width: 200px; 
-    padding: 5px; 
+    width: 200px;
+    padding: 5px;
     margin: 10px;
-    border-radius: 4px; 
-    font-size: 1rem; 
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
 /* Style the submit button */
 form[name="leave_message"] button {
-    align-self: center; /* Center the button horizontally */
+    align-self: center;
+    /* Center the button horizontally */
     padding: 10px 20px;
-    background-color: #4CAF50; /* Green background for the button */
+    background-color: #4CAF50;
+    /* Green background for the button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -169,6 +174,7 @@ form[name="leave_message"] button {
     font-size: bold;
     padding: 10px;
 }
+
 /* to make changes for tablet devices */
 @media only screen and (min-width: 768px) {
 
@@ -179,8 +185,8 @@ form[name="leave_message"] button {
         color: red;
     }
 
-    .exp-item  {
-       font-size: x-large;
+    .exp-item {
+        font-size: x-large;
         /* add color at tablet size*/
         background-color: lightblue;
         /* change the direction of items when larger */
@@ -197,7 +203,7 @@ form[name="leave_message"] button {
         display: grid;
         justify-content: center;
     }
-    
+
     #skills li {
         /* adds more width on larger screens */
         flex: 1 1 180px;
@@ -225,16 +231,16 @@ form[name="leave_message"] button {
         font-style: italic;
     }
 
-/* skills layout: using grid on large screens */
-#skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 25px;
-    justify-content: center;
+    /* skills layout: using grid on large screens */
+    #skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 25px;
+        justify-content: center;
     }
 
-#skills  {
-    font-size: 1.5rem;
-    padding: 15px 25px;
+    #skills {
+        font-size: 1.5rem;
+        padding: 15px 25px;
     }
 }
